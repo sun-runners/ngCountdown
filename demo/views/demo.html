@@ -1,0 +1,115 @@
+<div class="w-100 h-100 f-n f-45px">
+  <ng-gradient class="p-a w-100 h-100 t-0 l-0 z-1" ng-gradient-option="{
+    opacity: [1, 1],
+    direction: 'radial',
+    states: {
+      'default-state': {
+        gradients: [
+          ['#CFD8DC', '#B0BEC5'],
+          ['#90A4AE', '#78909C'],
+          ['#78909C', '#90A4AE'],
+          ['#B0BEC5', '#CFD8DC']
+        ]
+      }
+    }
+  }"></ng-gradient>
+  <div class="p-a w-100 h-100 t-0 l-0 z-2">
+    <div full-page class="section" options="{ scrollingSpeed: 500, controlArrows: false }" ng-init="directions = [{title:'Down', value:true}, {title:'UP', value:false}];">
+      <!-- DailyCounter -->
+      <div class="f-l w-100 h-100 slide">
+        <div class="w-100 cen">
+          <div class="w-100 t-c" ng-init="time = 3600 * 24 * 30;">
+            <ng-countdown ng-countdown-option="{clockFace:'DailyCounter', countdown:true}" ng-countdown-time="time" ng-countdown-instance="instanceDailyCounter"></ng-countdown>
+          </div>
+          <div class="w-100 t-c" style="font-family: 'Noto Sans', sans-serif;">
+            <div class="d-ib f-n">
+              <div class="f-l">
+                <button class="d-ib c-we p-9px o-50 o-100-H" ng-click="instanceDailyCounter.start();">
+                  <i class="w-100 ion-play"></i>
+                  <span class="w-100 f-18px">Start</span>
+                </button>
+                <button class="d-ib c-we p-9px o-50 o-100-H" ng-click="instanceDailyCounter.stop();">
+                  <i class="w-100 ion-pause"></i>
+                  <span class="w-100 f-18px">Stop</span>
+                </button>
+                <button class="d-ib c-we p-9px o-50 o-100-H"
+                ng-init="indexDailyCounter=0;"
+                ng-click="indexDailyCounter=indexDailyCounter+1; indexDailyCounter = indexDailyCounter%2; instanceDailyCounter.setCountdown( directions[indexDailyCounter].value );">
+                  <i class="w-100 ion-loop"></i>
+                  <span class="w-100 f-18px">{{directions[indexDailyCounter].title}}</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- HourlyCounter -->
+      <div class="f-l w-100 h-100 slide">
+        <div class="w-100 cen">
+          <div class="w-100 t-c" ng-init="time = 3600 * 12;">
+            <ng-countdown ng-countdown-option="{clockFace:'HourlyCounter', countdown:true}" ng-countdown-time="time" ng-countdown-instance="instanceHourlyCounter"></ng-countdown>
+          </div>
+          <div class="w-100 t-c" style="font-family: 'Noto Sans', sans-serif;">
+            <div class="d-ib f-n">
+              <div class="f-l">
+                <button class="d-ib c-we p-9px o-50 o-100-H" ng-click="instanceHourlyCounter.start();">
+                  <i class="w-100 ion-play"></i>
+                  <span class="w-100 f-18px">Start</span>
+                </button>
+                <button class="d-ib c-we p-9px o-50 o-100-H" ng-click="instanceHourlyCounter.stop();">
+                  <i class="w-100 ion-pause"></i>
+                  <span class="w-100 f-18px">Stop</span>
+                </button>
+                <button class="d-ib c-we p-9px o-50 o-100-H"
+                ng-init="indexHourlyCounter=0;"
+                ng-click="indexHourlyCounter=indexHourlyCounter+1; indexHourlyCounter = indexHourlyCounter%2; instanceHourlyCounter.setCountdown( directions[indexHourlyCounter].value );">
+                  <i class="w-100 ion-loop"></i>
+                  <span class="w-100 f-18px">{{directions[indexHourlyCounter].title}}</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- MinuteCounter -->
+      <div class="f-l w-100 h-100 slide">
+        <div class="w-100 cen">
+          <div class="w-100 t-c" ng-init="time = 3600;">
+            <ng-countdown ng-countdown-option="{clockFace:'MinuteCounter', countdown:true}" ng-countdown-time="time" ng-countdown-instance="instanceMinuteCounter"></ng-countdown>
+          </div>
+          <div class="w-100 t-c" style="font-family: 'Noto Sans', sans-serif;">
+            <div class="d-ib f-n">
+              <div class="f-l">
+                <button class="d-ib c-we p-9px o-50 o-100-H" ng-click="instanceMinuteCounter.start();">
+                  <i class="w-100 ion-play"></i>
+                  <span class="w-100 f-18px">Start</span>
+                </button>
+                <button class="d-ib c-we p-9px o-50 o-100-H" ng-click="instanceMinuteCounter.stop();">
+                  <i class="w-100 ion-pause"></i>
+                  <span class="w-100 f-18px">Stop</span>
+                </button>
+                <button class="d-ib c-we p-9px o-50 o-100-H"
+                ng-init="indexMinuteCounter=0;"
+                ng-click="indexMinuteCounter=indexMinuteCounter+1; indexMinuteCounter = indexMinuteCounter%2; instanceMinuteCounter.setCountdown( directions[indexMinuteCounter].value );">
+                  <i class="w-100 ion-loop"></i>
+                  <span class="w-100 f-18px">{{directions[indexMinuteCounter].title}}</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Text -->
+      <button class="p-a w-20 h-60px cen-y c-we l-0 z-2" ng-click="movePrev();">
+        <div class="p-r w-100 h-100">
+          <i class="ion-arrow-left-b f-30px cen"></i>
+        </div>
+      </button>
+      <button class="p-a w-20 h-60px cen-y c-we r-0 z-2" ng-click="moveNext();">
+        <div class="p-r w-100 h-100">
+          <i class="ion-arrow-right-b f-30px cen"></i>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
