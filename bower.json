@@ -6,7 +6,7 @@
   "authors": [
     "Kim Sun Wook <sunus7@naver.com>"
   ],
-  "description": "ngCountdown is an angularjs library that creates gradient animations with granim.js",
+  "description": "ngCountdown is an angularjs library that creates countdown and countup with flipclock.js",
   "repository": {
     "type": "git",
     "url": "git@github.com:KimSunWook/ngCountdown.git"
