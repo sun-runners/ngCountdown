@@ -64,9 +64,10 @@ view.html
 ```
 <ng-countdown
   ng-init="time = 3600 * 24 * 30;" // 3600: 1hour, 3600*24: 24: 24hour, 3600 * 24 * 30: 30day
-  ng-countdown-option="{clockFace:'DailyCounter', countdown:true}"
-  ng-countdown-time="time"
-  ng-countdown-instance="instance">
+  ng-countdown-option="{clockFace:'DailyCounter', countdown:true}" // FlipClock option
+  ng-countdown-time="time" // initial time (sec)
+  ng-countdown-instance="instance" // FlipClock instance
+>
 </ng-countdown>
 
 ```
