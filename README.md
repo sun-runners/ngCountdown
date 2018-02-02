@@ -36,11 +36,11 @@ or
 ```
 or
 ```
-<script src="https://raw.githubusercontent.com/KimSunWook/ngCountdown/master/ngCountdown.js"></script>
+<script src="https://cdn.rawgit.com/KimSunWook/ngCountdown/v1.0.1/ngCountdown.js"></script>
 ```
 or
 ```
-<script src="https://raw.githubusercontent.com/KimSunWook/ngCountdown/master/ngCountdown.min.js"></script>
+<script src="https://cdn.rawgit.com/KimSunWook/ngCountdown/v1.0.1/ngCountdown.min.js"></script>
 ```
 
 <br/>
