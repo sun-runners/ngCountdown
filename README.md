@@ -27,10 +27,14 @@ Quick start
 
 Copy-paste the stylesheet ```<script>``` into your ```<body>``` and ```<link>``` into your ```<head>```.
 
+<br/>
+
 flipclock.css
 ```
 <link rel="stylesheet" href="./bower_components/flipclock/compiled/flipclock.css">
 ```
+
+<br/>
 
 flipclock.js
 ```
@@ -40,6 +44,8 @@ or
 ```
 <script src=".bower_components/flipclock/compiled/flipclock.min.js"></script>
 ```
+
+<br/>
 
 ngCountdown.js
 ```
