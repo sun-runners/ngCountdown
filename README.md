@@ -25,10 +25,25 @@ bower install ngCountdown --save
 Quick start
 -------
 
-Copy-paste the stylesheet <script> into your <body>.
+Copy-paste the stylesheet ```<script>``` into your ```<body>``` and ```<link>``` into your ```<head>```.
 
+flipclock.css
 ```
-<script src=".bower_components/ng-countdown/ngCountdown.js"></script>
+<link rel="stylesheet" href="./bower_components/flipclock/compiled/flipclock.css">
+```
+
+flipclock.js
+```
+<script src=".bower_components/flipclock/compiled/flipclock.js"></script>
+```
+or
+```
+<script src=".bower_components/flipclock/compiled/flipclock.min.js"></script>
+```
+
+ngCountdown.js
+```
+<script src=".bower_components/ng-countdown/ngCountdown.min.js"></script>
 ```
 or
 ```
