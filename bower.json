@@ -2,7 +2,7 @@
   "name": "ng-countdown",
   "version": "1.0.1",
   "homepage": "https://github.com/KimSunWook/ngCountdown",
-  "main": "ngCountdown.js",
+  "main": ["ngCountdown.js", "ngCountdown.min.js"],
   "authors": [
     "Kim Sun Wook <sunus7@naver.com>"
   ],
