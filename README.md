@@ -42,10 +42,6 @@ Copy-paste the stylesheet ```<script>``` into your ```<body>``` and ```<link>```
 ```
 <script src=".bower_components/flipclock/compiled/flipclock.js"></script>
 ```
-or
-```
-<script src=".bower_components/flipclock/compiled/flipclock.min.js"></script>
-```
 
 <br/>
 
@@ -56,15 +52,7 @@ or
 ```
 or
 ```
-<script src=".bower_components/ng-countdown/ngCountdown.min.js"></script>
-```
-or
-```
-<script src="https://cdn.rawgit.com/KimSunWook/ngCountdown/v1.0.1/ngCountdown.js"></script>
-```
-or
-```
-<script src="https://cdn.rawgit.com/KimSunWook/ngCountdown/v1.0.1/ngCountdown.min.js"></script>
+<script src="https://cdn.rawgit.com/KimSunWook/ngCountdown/v1.1.2/ngCountdown.js"></script>
 ```
 
 <br/>
@@ -87,10 +75,18 @@ view.html
 
 ```
 <ng-countdown
-  ng-init="time = 3600 * 24 * 30;" // 3600: 1hour, 3600*24: 24: 24hour, 3600 * 24 * 30: 30day
-  ng-countdown-option="{clockFace:'DailyCounter', countdown:true}" // FlipClock option
-  ng-countdown-time="time" // initial time (sec)
-  ng-countdown-instance="instance" // FlipClock instance
+
+  <!-- 3600: 1hour, 3600*24: 24: 24hour, 3600 * 24 * 30: 30day -->
+  ng-init="time = 3600 * 24 * 30;"
+
+  <!-- FlipClock option -->
+  ng-countdown-option="{clockFace:'DailyCounter', countdown:true}"
+
+  <!-- initial time (sec) -->
+  ng-countdown-time="time"
+
+  <!-- FlipClock instance -->
+  ng-countdown-instance="instance"
 >
 </ng-countdown>
 
