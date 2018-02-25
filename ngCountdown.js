@@ -1,6 +1,6 @@
 (function(angular) {
   angular.module('ngCountdown', ['ng'])
-    .directive("ngCountdown", ['$rootScope' function($rootScope) {
+    .directive("ngCountdown", ['$rootScope', function($rootScope) {
       return {
         link: function(scope, element, attrs) {
 
@@ -30,5 +30,5 @@
         replace: true,
         restrict: "E"
       };
-    });
-}])(angular);
+    }]);
+  })(angular);

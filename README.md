@@ -52,7 +52,7 @@ Copy-paste the stylesheet ```<script>``` into your ```<body>``` and ```<link>```
 ```
 or
 ```
-<script src="https://cdn.rawgit.com/KimSunWook/ngCountdown/v1.1.2/ngCountdown.js"></script>
+<script src="https://cdn.rawgit.com/KimSunWook/ngCountdown/v1.1.3/ngCountdown.js"></script>
 ```
 
 <br/>
